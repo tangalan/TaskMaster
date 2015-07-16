@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Description: MyString
+  Category: MyString
+  Date: 2015-07-15
+  Time: 2015-07-15 16:16:44
+  Reward: 1
+  Email: MyString
+
+two:
+  Description: MyString
+  Category: MyString
+  Date: 2015-07-15
+  Time: 2015-07-15 16:16:44
+  Reward: 1
+  Email: MyString

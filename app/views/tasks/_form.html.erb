@@ -1,0 +1,47 @@
+<%= form_for @task do |f| %>
+
+  <p>
+    <%= f.label :Description %><br>
+    <%= f.text_area :Description %>
+  </p>
+ 
+  <p>
+    <%= f.label :Category %><br>
+	
+	<%= f.radio_button :Category, 'Housework' %> 
+	<%= f.label :Category, 'Housework', :value => 'Housework' %>
+	
+	<%= f.radio_button :Category, 'Delivery' %>
+	<%= f.label :Category, 'Delivery', :value => 'Delivery' %>
+	
+	<%= f.radio_button :Category, 'Homework' %>
+	<%= f.label :Category, 'Homework', :value => 'Homework' %>
+	
+  </p>
+  
+  <p>
+    <%= f.label :Date %><br>
+    <%= f.date_field :Date, :value => Time.now.strftime("%Y-%m-%d") %>
+  </p>
+  
+  <p>
+    <%= f.label :Time %><br>
+    <%= f.time_field :Time %>
+  </p>
+  
+  <p>
+    <%= f.label :Reward %><br>
+    <%= f.text_area :Reward %>
+  </p>
+  
+  <p>
+    <%= f.label :Email %><br>
+    <%= f.email_field :Email %>
+  </p>
+ 
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+
+
+<% end %>
