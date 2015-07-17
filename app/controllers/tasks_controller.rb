@@ -2,6 +2,13 @@ module ApplicationHelper
   def time_format(datetime)
     datetime.strftime('%H:%M') unless datetime.blank?
   end
+  
+  def send_email(email)
+    UserMailer.welcome_email(email).deliver
+    format.html { redirect_to(@task, notice: 'Email was successfully created.') }
+    format.json { render json: @task, status: :created, location: @task }
+  end
+  
 end
 
 class TasksController < ApplicationController
@@ -26,6 +33,9 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
+  end
+  
+  def email
   end
 
   # POST /tasks
