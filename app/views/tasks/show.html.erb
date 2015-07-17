@@ -30,7 +30,6 @@
   <%= @task.Email %>
 </p>
 
-<%= button_to 'Email', send_email(@task.Email) %>
-
-<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= mail_to @task.Email, 'Accept Task!', cc: "taskmasterapplication@gmail.com", subject: "Accepting Task", class: 'button' %>
+<!-- <%= link_to 'Edit', edit_task_path(@task) %> | -->
 <%= link_to 'Back', tasks_path %>

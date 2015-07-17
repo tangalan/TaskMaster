@@ -1,8 +1,21 @@
 <%= form_for @task do |f| %>
 
+ <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:
+      </h2>
+      <ul>
+        <% @task.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= f.label :Description %><br>
-    <%= f.text_area :Description %>
+    <%= f.text_area :Description, size: "40x8"%>
   </p>
  
   <p>
@@ -31,7 +44,7 @@
   
   <p>
     <%= f.label :Reward %><br>
-    <%= f.text_area :Reward %>
+    <%= f.text_field :Reward %>
   </p>
   
   <p>
