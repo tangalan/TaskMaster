@@ -17,7 +17,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   
   ## AT: added delivery method 
- 
+ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
@@ -26,7 +26,7 @@ Rails.application.configure do
    :user_name            => "taskmasterapplication@gmail.com",
    :password             => "taskmasterapp",
    :authentication       => :login,
-  :enable_starttls_auto => true
+   :enable_starttls_auto => true
   }
 
   # Print deprecation notices to the Rails logger.

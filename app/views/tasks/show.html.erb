@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
+
+<p>
+  <strong>User:</strong>
+  <%= @task.user.email %>
+</p>
 
 <p>
   <strong>Description:</strong>
@@ -25,11 +30,8 @@
   <%= @task.Reward %>
 </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @task.Email %>
-</p>
 
-<%= mail_to @task.Email, 'Accept Task!', cc: "taskmasterapplication@gmail.com", subject: "Accepting Task", class: 'button' %>
+
+<%= mail_to @task.user.email, 'Accept Task!', cc: "taskmasterapplication@gmail.com", subject: "Accepting Task", class: 'button' %>
 <!-- <%= link_to 'Edit', edit_task_path(@task) %> | -->
 <%= link_to 'Back', tasks_path %>

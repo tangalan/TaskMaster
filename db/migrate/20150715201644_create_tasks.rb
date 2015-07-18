@@ -6,7 +6,7 @@ class CreateTasks < ActiveRecord::Migration
       t.date :Date
       t.time :Time
       t.integer :Reward
-      t.string :Email
+      # t.string :Email
 
       t.timestamps null: false
     end
