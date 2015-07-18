@@ -24,6 +24,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise', '~> 3.5.1'
+
+group :test do
+    gem 'rspec', ">=1.2.2"
+    gem 'rspec-rails', ">=1.2.2"
+    gem 'capybara' # replaced webrat
+    gem 'cucumber-rails' #replaced cucumber
+    gem 'cucumber-rails-training-wheels' #is needed to generate web_steps.rb
+    #web_steps.rb replaced webrat_steps.rb
+    gem 'database_cleaner' # I don't know why you need this one but I had an error that told me I needed it so I added it.
+end 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

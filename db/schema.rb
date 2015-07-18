@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20150717212902) do
     t.date     "Date"
     t.time     "Time"
     t.integer  "Reward"
-    t.string   "Email"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"

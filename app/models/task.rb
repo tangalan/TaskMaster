@@ -5,7 +5,5 @@ class Task < ActiveRecord::Base
   
   validates :Reward, presence: true, numericality: true
   
-  # validates :Email, presence: true
-  
   belongs_to :user
 end
