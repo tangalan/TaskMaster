@@ -17,7 +17,8 @@ module NavigationHelpers
       user_session_path
 
     when /^the home\s?page$/
-      '/'
+      welcome_index_path
+      
     when /the list of tasks/ 
       tasks_path
     
