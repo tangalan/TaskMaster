@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise', '~> 3.5.1'
 
+gem 'geocoder'
+
 group :test do
     gem 'rspec', ">=1.2.2"
     gem 'rspec-rails', ">=1.2.2"

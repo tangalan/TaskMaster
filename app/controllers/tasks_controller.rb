@@ -13,7 +13,11 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    if params[:search].present?
+      @tasks = Task.near(params[:search], 50)
+    else 
+      @tasks = Task.all
+    end
   end
 
   # GET /tasks/1
@@ -80,6 +84,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:Description, :Category, :Date, :Time, :Reward, :Email)
+      params.require(:task).permit(:Description, :Category, :Date, :Time, :Reward, :Email, :address)
     end
 end

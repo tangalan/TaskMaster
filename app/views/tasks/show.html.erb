@@ -1,5 +1,7 @@
 <!-- <p id="notice"><%= notice %></p> -->
 
+
+
 <p>
   <strong>User:</strong>
   <%= @task.user.email %>
@@ -26,12 +28,19 @@
 </p>
 
 <p>
-  <strong>Reward:</strong>
+  <strong>Reward: $</strong>
   <%= @task.Reward %>
 </p>
 
+<p>
+  <strong>Address:</strong>
+  <%= @task.address %>
+</p>
 
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@task.latitude}%2C#{@task.longitude}" %>
 
-<%= mail_to @task.user.email, 'Accept Task!', cc: "taskmasterapplication@gmail.com", subject: "Accepting Task", class: 'button' %>
-<!-- <%= link_to 'Edit', edit_task_path(@task) %> | -->
-<%= link_to 'Back', tasks_path %>
+<p>
+	<%= mail_to @task.user.email, 'Accept Task!', cc: "taskmasterapplication@gmail.com", subject: "Accepting Task", class: 'button' %>
+	<!-- <%= link_to 'Edit', edit_task_path(@task) %> | -->
+	<%= link_to 'Back', tasks_path %>
+</p>
