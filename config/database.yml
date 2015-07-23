@@ -21,15 +21,14 @@ test: &test
   database: db/test.sqlite3
 
 production:
-  # adapter: postgresql
-  # encoding: unicode
-  # database: taskmaster_database
-  # pool: 5
-  # host: localhost
-  # user: postgres
-  # password: pgpassword
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: taskmaster_database
+  pool: 5
+  host: localhost
+  user: postgres
+  password: pgpassword
+
 
 cucumber:
   <<: *test
