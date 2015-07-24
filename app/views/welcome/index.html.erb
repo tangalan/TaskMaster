@@ -1,6 +1,19 @@
 <h1> <center>  Welcome to TaskMaster! </center></h1>
-<p align="center">I am a.... </p>
 
-<center> <%= link_to "Task Master", new_task_path %> </center>
 
-<center> <%= link_to "Task Doer", tasks_path %> </center>
+<p align="center"><i> Use this web application to create tasks you want done, or to search for tasks to accomplish for a cash reward. </i> </p>
+
+<p align="center">Please select one of the following: </p> 
+
+
+
+<div style="float:left;">
+	<center> <strong> <%= button_to "Task Master", new_task_path, :class => "button", :method => :get %> </strong> </center> 
+</div>
+
+<div style="float:left;">
+	<center> <%= button_to "Task Doer", tasks_path, :class => "button", :method => :get %> </center>
+</div>
+	
+
+ 

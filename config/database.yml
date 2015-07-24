@@ -12,6 +12,7 @@ default: &default
 development:
   <<: *default
   database: db/development.sqlite3
+  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -20,14 +21,16 @@ test: &test
   <<: *default
   database: db/test.sqlite3
 
-production:
+  
+
+# production:
   adapter: postgresql
   encoding: unicode
   database: taskmaster_database
   pool: 5
   host: localhost
   user: postgres
-  password: pgpassword
+  password:
 
 
 cucumber:
