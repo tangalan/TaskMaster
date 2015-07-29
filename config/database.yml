@@ -23,14 +23,14 @@ test: &test
 
   
 
-# production:
-  adapter: postgresql
-  encoding: unicode
-  database: taskmaster_database
-  pool: 5
-  host: localhost
-  user: postgres
-  password:
+# # production:
+  # adapter: postgresql
+  # encoding: unicode
+  # database: taskmaster_database
+  # pool: 5
+  # host: localhost
+  # user: postgres
+  # password:
 
 
 cucumber:

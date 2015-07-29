@@ -19,9 +19,11 @@ ActiveRecord::Schema.define(version: 20150722070048) do
     t.date     "Date"
     t.time     "Time"
     t.integer  "Reward"
+    t.string   "Email"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
   end
