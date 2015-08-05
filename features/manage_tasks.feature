@@ -11,23 +11,23 @@ Feature: Manage Tasks
 			
 		Scenario: Edit Tasks 
 			Given a logged in user 
-			When I follow "Task Master" 
+			When I press "Task Master" 
 			And I create a random task
-			And I follow "Back"
+			And I press "Back"
 			And I follow "Edit"
 			Then I should see "Editing Task" 
 			
 		Scenario: Destroy Tasks 
 			Given a logged in user 
-			When I follow "Task Master" 
+			When I press "Task Master" 
 			And I create a random task
-			And I follow "Back"
+			And I press "Back"
 			And I follow "Destroy"
 			Then I should see "Task was successfully destroyed."
 			
 		Scenario: Accept Task
 			Given a logged in user 
-			When I follow "Task Master" 
+			When I press "Task Master" 
 			And I create a random task
 			Then I should have a mailto link 
 				

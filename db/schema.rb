@@ -13,13 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20150730012523) do
 
-  create_table "Tasks", force: :cascade do |t|
+  create_table "tasks", force: :cascade do |t|
     t.string   "Description"
     t.string   "Category"
     t.date     "Date"
     t.time     "Time"
     t.integer  "Reward"
-    t.string   "Email"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"

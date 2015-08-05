@@ -16,12 +16,12 @@ Feature: User Login
 	  	
 	  Scenario: Access New Task without logging in
 	  	When I go to the home page 
-	  	And I follow "Task Master" 
+	  	And I press "Task Master" 
 	  	Then I should see "You need to sign in or sign up before continuing."
 	  
 	  Scenario: Access Tasks List without logging in
 	  	When I go to the home page
-	  	And I follow "Task Doer" 
+	  	And I press "Task Doer" 
 	  	Then I should see "You need to sign in or sign up before continuing." 
 	  	
 	  	

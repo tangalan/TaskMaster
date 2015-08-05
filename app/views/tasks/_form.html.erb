@@ -27,8 +27,11 @@
 	<%= f.radio_button :Category, 'Delivery' %>
 	<%= f.label :Category, 'Delivery', :value => 'Delivery' %>
 	
-	<%= f.radio_button :Category, 'Homework' %>
-	<%= f.label :Category, 'Homework', :value => 'Homework' %>
+	<%= f.radio_button :Category, 'Manual Labor' %>
+	<%= f.label :Category, 'Manual Labor', :value => 'Manual Labor' %>
+	
+	<%= f.radio_button :Category, 'Misc' %>
+	<%= f.label :Category, 'Misc', :value => 'Misc' %>
 	
   </p>
   
@@ -48,8 +51,8 @@
   </p>
   
   <p>
-    <%= f.label 'Address' %><br>
-    <%= f.text_field :address %>
+    <%= f.label 'Address (Google Maps)' %><br>
+    <%= f.text_field :address, :size => 50 %>
   </p>
   
   <p>

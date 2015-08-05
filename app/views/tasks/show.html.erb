@@ -40,7 +40,16 @@
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@task.latitude}%2C#{@task.longitude}" %>
 
 <p>
-	<%= mail_to @task.user.email, 'Accept Task!', cc: "taskmasterapplication@gmail.com", subject: "Accepting Task", class: 'button' %>
-	<!-- <%= link_to 'Edit', edit_task_path(@task) %> | -->
-	<%= link_to 'Back', tasks_path %>
+		<%= mail_to @task.user.email, 'Accept Task!', cc: "taskmasterapplication@gmail.com", subject: "Accepting Task", :class => 'button' %>
+		<div align="left">
+			<%= button_to "Back", tasks_path, :class => "button", :method => :get %> 
+		</div>
+		
 </p>
+
+		
+
+
+
+
+
